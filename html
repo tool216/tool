@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>प्रीमियम HD फोटो कंप्रेसर - रंगीन फूलों वाली वेबसाइट</title>
+    <meta name="description" content="अपनी फोटो को HD क्वालिटी में कंप्रेस करें, मुफ्त में और आसानी से">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff9f9;
+            color: #333;
+            background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-floral-background_23-2149004865.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 5px solid #ff6b6b;
+        }
+        
+        nav {
+            background-color: rgba(255, 107, 107, 0.9);
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #ff6b6b;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .ad-banner {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .photo-compressor {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .upload-area {
+            border: 2px dashed #ff6b6b;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .upload-area:hover {
+            background-color: rgba(255, 107, 107, 0.1);
+        }
+        
+        button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background-color: #ff5252;
+            transform: scale(1.05);
+        }
+        
+        .btn-download {
+            background-color: #4CAF50;
+            display: none;
+        }
+        
+        .btn-download:hover {
+            background-color: #45a049;
+        }
+        
+        #preview-container {
+            display: none;
+            margin: 20px auto;
+            text-align: center;
+        }
+        
+        #image-preview {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        
+        .quality-options {
+            margin: 15px 0;
+        }
+        
+        .quality-options label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>प्रीमियम HD फोटो कंप्रेसर</h1>
+        <p>फोटो को HD क्वालिटी में कंप्रेस करें - तेज, आसान और मुफ्त!</p>
+    </header>
+    
+    <nav>
+        <a href="#">होम</a>
+        <a href="#">फोटो संपादक</a>
+        <a href="#">प्रीमियम सुविधाएं</a>
+        <a href="#">हमारे बारे में</a>
+        <a href="#">संपर्क</a>
+    </nav>
+    
+    <div class="container">
+        <!-- Google AdSense Ad -->
+        <div class="ad-banner">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <h2>फोटो को HD क्वालिटी में कंप्रेस करें</h2>
+        <p>अपनी फोटो अपलोड करें और हम इसे बिना क्वालिटी खोए HD फॉर्मेट में ऑप्टिमाइज कर देंगे।</p>
+        
+        <div class="photo-compressor">
+            <div class="upload-area" id="uploadArea">
+                <h3>फोटो अपलोड करने के लिए यहां क्लिक करें या ड्रॉप करें</h3>
+                <p>JPEG, PNG, WEBP फॉर्मेट स्वीकार्य</p>
+                <input type="file" id="fileInput" accept="image/*" style="display:none;">
+            </div>
+            
+            <div class="quality-options">
+                <h4>क्वालिटी सेलेक्ट करें:</h4>
+                <label><input type="radio" name="quality" value="high" checked> हाई क्वालिटी (80%)</label>
+                <label><input type="radio" name="quality" value="medium"> मीडियम क्वालिटी (60%)</label>
+                <label><input type="radio" name="quality" value="low"> लो क्वालिटी (40%)</label>
+            </div>
+            
+            <button id="compressBtn">HD में कंप्रेस करें</button>
+            
+            <div id="preview-container">
+                <h3>आपकी कंप्रेस की गई फोटो:</h3>
+                <img id="image-preview" alt="Compressed Image Preview">
+                <p id="file-info"></p>
+                <button class="btn-download" id="downloadBtn">डाउनलोड करें</button>
+            </div>
+        </div>
+        
+        <!-- Additional Ad Space -->
+        <div class="ad-banner">
+            <h3>स्पॉन्सर विज्ञापन</h3>
+            <div id="ad-space">
+                <!-- Ad content will be loaded here -->
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 प्रीमियम HD फोटो कंप्रेसर. सर्वाधिकार सुरक्षित.</p>
+        <p>वेबसाइट नाम: "PremiumHDPhotoCompressor" - Google पर सर्च करने के लिए</p>
+    </footer>
+
+    <script>
+        // File upload and compression functionality
+        const fileInput = document.getElementById('fileInput');
+        const uploadArea = document.getElementById('uploadArea');
+        const compressBtn = document.getElementById('compressBtn');
+        const previewContainer = document.getElementById('preview-container');
+        const imagePreview = document.getElementById('image-preview');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const fileInfo = document.getElementById('file-info');
+        
+        // Upload area click event
+        uploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        // Handle file selection
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                // Display file info
+                fileInfo.textContent = `फाइल: ${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+                
+                // Show preview
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    imagePreview.src = event.target.result;
+                    previewContainer.style.display = 'block';
+                    downloadBtn.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Compress button click event
+        compressBtn.addEventListener('click', () => {
+            const file = fileInput.files[0];
+            if (!file) {
+                alert('कृपया पहले एक फोटो अपलोड करें');
+                return;
+            }
+            
+            const quality = document.querySelector('input[name="quality"]:checked').value;
+            let qualityValue = 0.8; // default high quality
+            
+            if (quality === 'medium') qualityValue = 0.6;
+            else if (quality === 'low') qualityValue = 0.4;
+            
+            // Simulate compression (in a real app, you would use actual compression libraries)
+            compressImage(file, qualityValue)
+                .then(compressedFile => {
+                    // Create download link
+                    const url = URL.createObjectURL(compressedFile);
+                    imagePreview.src = url;
+                    
+                    // Update file info
+                    fileInfo.textContent += ` → कंप्रेस्ड: ${(compressedFile.size / 1024).toFixed(2)} KB (${qualityValue*100}% क्वालिटी)`;
+                    
+                    // Show download button
+                    downloadBtn.style.display = 'inline-block';
+                    downloadBtn.onclick = () => {
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'compressed_' + file.name;
+                        a.click();
+                    };
+                    
+                    // Show success message
+                    alert('फोटो सफलतापूर्वक HD क्वालिटी में कंप्रेस हो गई है!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('फोटो कंप्रेस करने में त्रुटि: ' + error.message);
+                });
+        });
+        
+        // Simulated image compression function
+        function compressImage(file, quality) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                
+                reader.onload = (event) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+                        
+                        // Calculate new dimensions (optional: you can add resizing logic)
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        
+                        // Draw image on canvas
+                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                        
+                        // Convert to blob with specified quality
+                        canvas.toBlob((blob) => {
+                            if (!blob) {
+                                reject(new Error('Canvas to Blob conversion failed'));
+                                return;
+                            }
+                            
+                            resolve(new File([blob], file.name, {
+                                type: 'image/jpeg',
+                                lastModified: Date.now()
+                            }));
+                        }, 'image/jpeg', quality);
+                    };
+                    
+                    img.onerror = () => reject(new Error('Image loading error'));
+                    img.src = event.target.result;
+                };
+                
+                reader.onerror = () => reject(new Error('FileReader error'));
+                reader.readAsDataURL(file);
+            });
+        }
+        
+        // Load ads after page load
+        window.addEventListener('load', () => {
+            // Simulate ad loading
+            setTimeout(() => {
+                const adSpace = document.getElementById('ad-space');
+                adSpace.innerHTML = `
+                    <p>विज्ञापन: प्रीमियम फोटो एडिटिंग सॉफ्टवेयर - 50% छूट</p>
+                    <button onclick="window.location.href='https://example.com/ads'">अभी खरीदें</button>
+                `;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
